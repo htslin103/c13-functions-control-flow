@@ -32,17 +32,17 @@ function getInputAsBoolean(label) {
 function addTextToPage(text,isBold) {
     let body ="";
     let newParagraph ="";
+    let lineBreak = document.createElement("br");
+    
+    body = document.getElementsByTagName('body')[0]
     if(isBold)
     {
-        body = document.getElementsByTagName('body')[0]
         newParagraph = document.createElement('strong')
     }
     else{
-        body = document.getElementsByTagName('body')[0]
         newParagraph = document.createElement('p')
-       
     }
-
+    newParagraph.append(lineBreak)
     newParagraph.append(text)
     body.append(newParagraph)
 
