@@ -26,13 +26,25 @@ function getInputAsNumber(label) {
 }
 
 function getInputAsBoolean(label) {
-    return getInput(label).toLowerCase === 'true'
+    return getInput(label).toLowerCase() === 'true'
 }
 
-function addTextToPage(text) {
-    const body = document.getElementsByTagName('body')[0]
-    const newParagraph = document.createElement('p')
+function addTextToPage(text,isBold) {
+    let body ="";
+    let newParagraph ="";
+    if(isBold)
+    {
+        body = document.getElementsByTagName('body')[0]
+        newParagraph = document.createElement('strong')
+    }
+    else{
+        body = document.getElementsByTagName('body')[0]
+        newParagraph = document.createElement('p')
+       
+    }
+
     newParagraph.append(text)
     body.append(newParagraph)
+
 }
 
