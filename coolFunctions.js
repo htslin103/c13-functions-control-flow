@@ -48,3 +48,7 @@ function addTextToPage(text,isBold) {
 
 }
 
+function clearPage() {
+    const body = document.getElementsByTagName('body')[0]
+    body.replaceChildren('')
+}
