@@ -45,10 +45,10 @@ function getCoffee(isItMorning, haveCoffee, coffeeNearYou, coffeeShopNearby)
     }
 }
 
-addInputToPage("isItMorning", "true")
-addInputToPage("haveCoffee", "true")
-addInputToPage("coffeeNearYou", "true")
-addInputToPage("coffeeShopNearby", "true")
+addInputToPage("Is it morning?", "true")
+addInputToPage("Do you have coffee?", "true")
+addInputToPage("Is there coffee near you?", "true")
+addInputToPage("Is there a coffee shop nearby?", "true")
 addButtonToPage("getCoffee", ()=>{
     let isItMorning = ("isItMorning")
     let haveCoffee = getInputAsBoolean("haveCoffee")
